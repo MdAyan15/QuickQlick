@@ -1,4 +1,3 @@
-
 export type Category = {
   id: string;
   name: string;
@@ -20,38 +19,38 @@ export const categories: Category[] = [
     id: "entertainment",
     name: "Entertainment",
     icon: "tv",
-    description: "Streaming services, video platforms, and more"
+    description: "Streaming services, video platforms, and more",
   },
   {
     id: "shopping",
     name: "Shopping",
     icon: "shopping-cart",
-    description: "E-commerce platforms and online stores"
+    description: "E-commerce platforms and online stores",
   },
   {
     id: "food",
     name: "Food Delivery",
     icon: "utensils",
-    description: "Food delivery services for all your cravings"
+    description: "Food delivery services for all your cravings",
   },
   {
     id: "groceries",
     name: "Instant Delivery",
     icon: "clock",
-    description: "Quick delivery services for groceries and essentials"
+    description: "Quick delivery services for groceries and essentials",
   },
   {
     id: "travel",
     name: "Travel",
     icon: "map-pin",
-    description: "Airlines, hotels, and travel booking services"
+    description: "Airlines, hotels, and travel booking services",
   },
   {
     id: "gaming",
     name: "Gaming",
     icon: "gamepad",
-    description: "Online gaming platforms and services"
-  }
+    description: "Online gaming platforms and services",
+  },
 ];
 
 export const services: Service[] = [
@@ -62,7 +61,7 @@ export const services: Service[] = [
     logo: "/netflix.png",
     url: "https://www.netflix.com",
     description: "Stream TV shows and movies",
-    categoryId: "entertainment"
+    categoryId: "entertainment",
   },
   {
     id: "spotify",
@@ -70,7 +69,7 @@ export const services: Service[] = [
     logo: "/spotify.png",
     url: "https://www.spotify.com",
     description: "Music streaming service",
-    categoryId: "entertainment"
+    categoryId: "entertainment",
   },
   {
     id: "youtube",
@@ -78,17 +77,17 @@ export const services: Service[] = [
     logo: "/youtube.jpg",
     url: "https://www.youtube.com",
     description: "Video sharing platform",
-    categoryId: "entertainment"
+    categoryId: "entertainment",
   },
   {
     id: "disney",
     name: "Jio Hotstar",
     logo: "/hotstar.jpeg",
     url: "https://www.disneyplus.com",
-    description: "Movie , Series and TV streaming service",
-    categoryId: "entertainment"
+    description: "Movie, Series and TV streaming service",
+    categoryId: "entertainment",
   },
-  
+
   // Shopping
   {
     id: "amazon",
@@ -96,7 +95,7 @@ export const services: Service[] = [
     logo: "/amazon.jpg",
     url: "https://www.amazon.com",
     description: "Online shopping platform",
-    categoryId: "shopping"
+    categoryId: "shopping",
   },
   {
     id: "flipkart",
@@ -104,15 +103,15 @@ export const services: Service[] = [
     logo: "/flipkart.png",
     url: "https://www.flipkart.com",
     description: "E-commerce shopping website",
-    categoryId: "shopping"
+    categoryId: "shopping",
   },
   {
     id: "etsy",
     name: "Myntra",
     logo: "/myntra.png",
     url: "https://www.myntra.com",
-    description: "E commerce shopping platform",
-    categoryId: "shopping"
+    description: "E-commerce shopping platform",
+    categoryId: "shopping",
   },
   {
     id: "ebay",
@@ -120,9 +119,9 @@ export const services: Service[] = [
     logo: "/ebay.png",
     url: "https://www.ebay.com",
     description: "Online auction and shopping",
-    categoryId: "shopping"
+    categoryId: "shopping",
   },
-  
+
   // Food
   {
     id: "swiggy",
@@ -130,7 +129,7 @@ export const services: Service[] = [
     logo: "/Swiggy_logo.png",
     url: "https://www.swiggy.com",
     description: "Online food delivery",
-    categoryId: "food"
+    categoryId: "food",
   },
   {
     id: "zomato",
@@ -138,7 +137,7 @@ export const services: Service[] = [
     logo: "/zomato.jpg",
     url: "https://www.zomato.com",
     description: "Restaurant finder and food delivery",
-    categoryId: "food"
+    categoryId: "food",
   },
   {
     id: "doordash",
@@ -146,7 +145,7 @@ export const services: Service[] = [
     logo: "/magicpin.png",
     url: "https://www.magicpin.com/",
     description: "Food delivery service",
-    categoryId: "food"
+    categoryId: "food",
   },
   {
     id: "ubereats",
@@ -154,17 +153,17 @@ export const services: Service[] = [
     logo: "/eatsure.jpeg",
     url: "https://www.eatsure.com",
     description: "Food delivery platform",
-    categoryId: "food"
+    categoryId: "food",
   },
-  
-  // Groceries/Instant Delivery
+
+  // Groceries
   {
     id: "zepto",
     name: "Zepto",
     logo: "/zepto.png",
     url: "https://www.zepto.com",
     description: "10-minute grocery delivery",
-    categoryId: "groceries"
+    categoryId: "groceries",
   },
   {
     id: "blinkit",
@@ -172,7 +171,7 @@ export const services: Service[] = [
     logo: "/blinkit.png",
     url: "https://www.blinkit.com",
     description: "Quick commerce platform",
-    categoryId: "groceries"
+    categoryId: "groceries",
   },
   {
     id: "instacart",
@@ -180,7 +179,7 @@ export const services: Service[] = [
     logo: "/swiggy_insta.jpeg",
     url: "https://www.swiggy.com/instamart",
     description: "Grocery delivery service",
-    categoryId: "groceries"
+    categoryId: "groceries",
   },
   {
     id: "gopuff",
@@ -188,25 +187,25 @@ export const services: Service[] = [
     logo: "/bb.png",
     url: "https://www.bigbasket.com",
     description: "Instant needs delivery",
-    categoryId: "groceries"
+    categoryId: "groceries",
   },
-  
+
   // Travel
   {
     id: "booking",
     name: "Booking.com",
-    logo: " /booking.svg",
+    logo: "/booking.svg",
     url: "https://www.booking.com",
     description: "Hotel reservations",
-    categoryId: "travel"
+    categoryId: "travel",
   },
   {
     id: "airbnb",
     name: "Airbnb",
-    logo: " /airbnb-logo.png",
+    logo: "/airbnb-logo.png",
     url: "https://www.airbnb.com",
     description: "Vacation rentals",
-    categoryId: "travel"
+    categoryId: "travel",
   },
   {
     id: "expedia",
@@ -214,7 +213,7 @@ export const services: Service[] = [
     logo: "/Expedia_Icon_2022.svg.png",
     url: "https://www.expedia.com",
     description: "Travel booking website",
-    categoryId: "travel"
+    categoryId: "travel",
   },
   {
     id: "makemytrip",
@@ -222,9 +221,9 @@ export const services: Service[] = [
     logo: "/mmt.png",
     url: "https://www.makemytrip.com",
     description: "Travel company",
-    categoryId: "travel"
+    categoryId: "travel",
   },
-  
+
   // Gaming
   {
     id: "steam",
@@ -232,7 +231,7 @@ export const services: Service[] = [
     logo: "/steam.png",
     url: "https://store.steampowered.com",
     description: "Digital game distribution",
-    categoryId: "gaming"
+    categoryId: "gaming",
   },
   {
     id: "epicgames",
@@ -240,7 +239,7 @@ export const services: Service[] = [
     logo: "/Epic_Games_logo.png",
     url: "https://www.epicgames.com",
     description: "Game store and engine creator",
-    categoryId: "gaming"
+    categoryId: "gaming",
   },
   {
     id: "xboxgamepass",
@@ -248,7 +247,7 @@ export const services: Service[] = [
     logo: "/xbox-game-pass-logo-png_seeklogo-389147.png",
     url: "https://www.xbox.com/xbox-game-pass",
     description: "Game subscription service",
-    categoryId: "gaming"
+    categoryId: "gaming",
   },
   {
     id: "playstation",
@@ -256,6 +255,7 @@ export const services: Service[] = [
     logo: "/ps.png",
     url: "https://www.playstation.com",
     description: "Gaming platform",
-    categoryId: "gaming"
-  }
+    categoryId: "gaming",
+  },
 ];
+ 
