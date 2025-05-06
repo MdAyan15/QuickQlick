@@ -59,7 +59,7 @@ export const services: Service[] = [
   {
     id: "netflix",
     name: "Netflix",
-    logo: "public/netflix.png",
+    logo: "/netflix.png",
     url: "https://www.netflix.com",
     description: "Stream TV shows and movies",
     categoryId: "entertainment"
@@ -67,7 +67,7 @@ export const services: Service[] = [
   {
     id: "spotify",
     name: "Spotify",
-    logo: "public/spotify.png",
+    logo: "/spotify.png",
     url: "https://www.spotify.com",
     description: "Music streaming service",
     categoryId: "entertainment"
@@ -75,7 +75,7 @@ export const services: Service[] = [
   {
     id: "youtube",
     name: "YouTube",
-    logo: "public/youtube.jpg",
+    logo: "/youtube.jpg",
     url: "https://www.youtube.com",
     description: "Video sharing platform",
     categoryId: "entertainment"
@@ -83,7 +83,7 @@ export const services: Service[] = [
   {
     id: "disney",
     name: "Jio Hotstar",
-    logo: "public/hotstar.jpeg",
+    logo: "/hotstar.jpeg",
     url: "https://www.disneyplus.com",
     description: "Movie , Series and TV streaming service",
     categoryId: "entertainment"
@@ -93,7 +93,7 @@ export const services: Service[] = [
   {
     id: "amazon",
     name: "Amazon",
-    logo: "public/amazon.jpg",
+    logo: "/amazon.jpg",
     url: "https://www.amazon.com",
     description: "Online shopping platform",
     categoryId: "shopping"
@@ -101,7 +101,7 @@ export const services: Service[] = [
   {
     id: "flipkart",
     name: "Flipkart",
-    logo: "public/flipkart.png",
+    logo: "/flipkart.png",
     url: "https://www.flipkart.com",
     description: "E-commerce shopping website",
     categoryId: "shopping"
@@ -109,7 +109,7 @@ export const services: Service[] = [
   {
     id: "etsy",
     name: "Myntra",
-    logo: "public/myntra.png",
+    logo: "/myntra.png",
     url: "https://www.myntra.com",
     description: "E commerce shopping platform",
     categoryId: "shopping"
@@ -117,7 +117,7 @@ export const services: Service[] = [
   {
     id: "ebay",
     name: "eBay",
-    logo: "public/ebay.png",
+    logo: "/ebay.png",
     url: "https://www.ebay.com",
     description: "Online auction and shopping",
     categoryId: "shopping"
@@ -127,7 +127,7 @@ export const services: Service[] = [
   {
     id: "swiggy",
     name: "Swiggy",
-    logo: "public/Swiggy_logo.png",
+    logo: "/Swiggy_logo.png",
     url: "https://www.swiggy.com",
     description: "Online food delivery",
     categoryId: "food"
@@ -135,7 +135,7 @@ export const services: Service[] = [
   {
     id: "zomato",
     name: "Zomato",
-    logo: "public/zomato.jpg",
+    logo: "/zomato.jpg",
     url: "https://www.zomato.com",
     description: "Restaurant finder and food delivery",
     categoryId: "food"
@@ -143,7 +143,7 @@ export const services: Service[] = [
   {
     id: "doordash",
     name: "MagicPin",
-    logo: "public/magicpin.png",
+    logo: "/magicpin.png",
     url: "https://www.magicpin.com/",
     description: "Food delivery service",
     categoryId: "food"
@@ -151,7 +151,7 @@ export const services: Service[] = [
   {
     id: "ubereats",
     name: "Eat Sure",
-    logo: "public/eatsure.jpeg",
+    logo: "/eatsure.jpeg",
     url: "https://www.eatsure.com",
     description: "Food delivery platform",
     categoryId: "food"
@@ -161,7 +161,7 @@ export const services: Service[] = [
   {
     id: "zepto",
     name: "Zepto",
-    logo: "public/zepto.png",
+    logo: "/zepto.png",
     url: "https://www.zepto.com",
     description: "10-minute grocery delivery",
     categoryId: "groceries"
@@ -169,7 +169,7 @@ export const services: Service[] = [
   {
     id: "blinkit",
     name: "Blinkit",
-    logo: "public/blinkit.png",
+    logo: "/blinkit.png",
     url: "https://www.blinkit.com",
     description: "Quick commerce platform",
     categoryId: "groceries"
@@ -177,7 +177,7 @@ export const services: Service[] = [
   {
     id: "instacart",
     name: "Swiggy Instamart",
-    logo: "public/swiggy_insta.jpeg",
+    logo: "/swiggy_insta.jpeg",
     url: "https://www.swiggy.com/instamart",
     description: "Grocery delivery service",
     categoryId: "groceries"
@@ -185,7 +185,7 @@ export const services: Service[] = [
   {
     id: "gopuff",
     name: "Big Basket",
-    logo: "public/bb.png",
+    logo: "/bb.png",
     url: "https://www.bigbasket.com",
     description: "Instant needs delivery",
     categoryId: "groceries"
@@ -195,7 +195,7 @@ export const services: Service[] = [
   {
     id: "booking",
     name: "Booking.com",
-    logo: " public/booking.svg",
+    logo: " /booking.svg",
     url: "https://www.booking.com",
     description: "Hotel reservations",
     categoryId: "travel"
@@ -203,7 +203,7 @@ export const services: Service[] = [
   {
     id: "airbnb",
     name: "Airbnb",
-    logo: " public/airbnb-logo.png",
+    logo: " /airbnb-logo.png",
     url: "https://www.airbnb.com",
     description: "Vacation rentals",
     categoryId: "travel"
@@ -211,7 +211,7 @@ export const services: Service[] = [
   {
     id: "expedia",
     name: "Expedia",
-    logo: "public/Expedia_Icon_2022.svg.png",
+    logo: "/Expedia_Icon_2022.svg.png",
     url: "https://www.expedia.com",
     description: "Travel booking website",
     categoryId: "travel"
@@ -219,7 +219,7 @@ export const services: Service[] = [
   {
     id: "makemytrip",
     name: "MakeMyTrip",
-    logo: "public/mmt.png",
+    logo: "/mmt.png",
     url: "https://www.makemytrip.com",
     description: "Travel company",
     categoryId: "travel"
@@ -229,7 +229,7 @@ export const services: Service[] = [
   {
     id: "steam",
     name: "Steam",
-    logo: "public/steam.png",
+    logo: "/steam.png",
     url: "https://store.steampowered.com",
     description: "Digital game distribution",
     categoryId: "gaming"
@@ -237,7 +237,7 @@ export const services: Service[] = [
   {
     id: "epicgames",
     name: "Epic Games",
-    logo: "public/Epic_Games_logo.png",
+    logo: "/Epic_Games_logo.png",
     url: "https://www.epicgames.com",
     description: "Game store and engine creator",
     categoryId: "gaming"
@@ -245,7 +245,7 @@ export const services: Service[] = [
   {
     id: "xboxgamepass",
     name: "Xbox Game Pass",
-    logo: "public/xbox-game-pass-logo-png_seeklogo-389147.png",
+    logo: "/xbox-game-pass-logo-png_seeklogo-389147.png",
     url: "https://www.xbox.com/xbox-game-pass",
     description: "Game subscription service",
     categoryId: "gaming"
@@ -253,7 +253,7 @@ export const services: Service[] = [
   {
     id: "playstation",
     name: "PlayStation",
-    logo: "public/ps.png",
+    logo: "/ps.png",
     url: "https://www.playstation.com",
     description: "Gaming platform",
     categoryId: "gaming"
