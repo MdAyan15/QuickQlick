@@ -1,4 +1,3 @@
-
 import React, { useState } from "react";
 import CategoryCard from "@/components/CategoryCard";
 import ServiceGrid from "@/components/ServiceGrid";
@@ -28,24 +27,19 @@ const Index = () => {
     }
   };
 
-  const filteredServices = selectedCategory
-    ? services.filter((service) => service.categoryId === selectedCategory)
-    : [];
-
-  const selectedCategoryName = selectedCategory
-    ? categories.find((category) => category.id === selectedCategory)?.name
-    : "";
+  const getCategoryServices = (categoryId: string) => {
+    return services.filter((service) => service.categoryId === categoryId);
+  };
 
   return (
     <div className="min-h-screen bg-gray-50">
       <header className="bg-white shadow-sm">
         <div className="container mx-auto py-8">
           <div className="text-center max-w-3xl mx-auto px-4">
-          <h1 className="text-3xl md:text-4xl font-bold mb-3 flex items-center justify-center gap-2 bg-gradient-to-r from-primary to-accent text-transparent bg-clip-text">
-            <img src="/logo_final.jpg" alt="Quick Qlick Logo" className="w-20 h-10 mr-5" />
-            <span style={{ color: "#E6E6FA" }}>Quick</span> <span style={{ color: "rgb(33, 150, 243)" }}>Qlick</span>
-          </h1>
-
+            <h1 className="text-3xl md:text-4xl font-bold mb-3 flex items-center justify-center gap-2 bg-gradient-to-r from-primary to-accent text-transparent bg-clip-text">
+              <img src="/logo_final.jpg" alt="Quick Qlick Logo" className="w-20 h-10 mr-5" />
+              <span style={{ color: "#E6E6FA" }}>Quick</span> <span style={{ color: "rgb(33, 150, 243)" }}>Qlick</span>
+            </h1>
             <p className="text-muted-foreground text-lg mb-8">
               Your gateway to all essential online services in one place
             </p>
@@ -71,6 +65,11 @@ const Index = () => {
               />
             ))}
           </div>
+          {selectedCategory && (
+            <div className="mt-8 animate-fade-in">
+              <ServiceGrid services={getCategoryServices(selectedCategory)} />
+            </div>
+          )}
         </section>
 
         {isSearchActive && (
@@ -81,19 +80,6 @@ const Index = () => {
             ) : (
               <p className="text-center text-muted-foreground">
                 No services found matching your search.
-              </p>
-            )}
-          </section>
-        )}
-
-        {selectedCategory && (
-          <section className="animate-fade-in">
-            <h2 className="text-2xl font-semibold mb-6">{selectedCategoryName} Services</h2>
-            {filteredServices.length > 0 ? (
-              <ServiceGrid services={filteredServices} />
-            ) : (
-              <p className="text-center text-muted-foreground">
-                No services available for this category.
               </p>
             )}
           </section>
