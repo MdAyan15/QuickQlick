@@ -31,6 +31,20 @@ const Index = () => {
     return services.filter((service) => service.categoryId === categoryId);
   };
 
+  // Calculate the index of the selected category
+  const selectedIndex = selectedCategory 
+    ? categories.findIndex(cat => cat.id === selectedCategory)
+    : -1;
+
+  // Calculate how many items should be in each row
+  const itemsPerRow = 6; // For large screens
+
+  // Split categories into rows
+  const rows = [];
+  for (let i = 0; i < categories.length; i += itemsPerRow) {
+    rows.push(categories.slice(i, i + itemsPerRow));
+  }
+
   return (
     <div className="min-h-screen bg-gray-50">
       <header className="bg-white shadow-sm">
@@ -53,23 +67,32 @@ const Index = () => {
       <main className="container mx-auto px-4 py-8">
         <section className="mb-10">
           <h2 className="text-2xl font-semibold mb-6">Browse Categories</h2>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
-            {categories.map((category) => (
-              <CategoryCard
-                key={category.id}
-                name={category.name}
-                icon={category.icon}
-                description={category.description}
-                isActive={selectedCategory === category.id}
-                onClick={() => handleCategoryClick(category.id)}
-              />
+          <div className="space-y-8">
+            {rows.map((row, rowIndex) => (
+              <React.Fragment key={rowIndex}>
+                {/* Category Row */}
+                <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+                  {row.map((category) => (
+                    <CategoryCard
+                      key={category.id}
+                      name={category.name}
+                      icon={category.icon}
+                      description={category.description}
+                      isActive={selectedCategory === category.id}
+                      onClick={() => handleCategoryClick(category.id)}
+                    />
+                  ))}
+                </div>
+
+                {/* Services section - show if a category from this row is selected */}
+                {selectedCategory && row.some(cat => cat.id === selectedCategory) && (
+                  <div className="animate-fade-in">
+                    <ServiceGrid services={getCategoryServices(selectedCategory)} />
+                  </div>
+                )}
+              </React.Fragment>
             ))}
           </div>
-          {selectedCategory && (
-            <div className="mt-8 animate-fade-in">
-              <ServiceGrid services={getCategoryServices(selectedCategory)} />
-            </div>
-          )}
         </section>
 
         {isSearchActive && (
