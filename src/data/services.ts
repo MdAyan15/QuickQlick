@@ -366,7 +366,7 @@ export const services: Service[] = [
     name: "99acres",
     logo: "/99acres.png",
     url: "https://www.99acres.com",
-    description: "Property search platform",
+    description: "Search Property",
     categoryId: "realestate",
   },
 

@@ -65,6 +65,56 @@ const Index = () => {
       </header>
 
       <main className="container mx-auto px-4 py-8">
+        {isSearchActive && (
+          <section className="animate-fade-in mb-10">
+            <h2 className="text-2xl font-semibold mb-6">Search Results</h2>
+            {searchResults.length > 0 ? (
+              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                {searchResults.map((service) => (
+                  <div
+                    key={service.id}
+                    className="service-card group cursor-pointer"
+                    onClick={() => window.open(service.url, "_blank", "noopener,noreferrer")}
+                  >
+                    <div className="w-16 h-16 rounded-lg mb-3 overflow-hidden bg-gray-100 flex items-center justify-center">
+                      <img
+                        src={service.logo}
+                        alt={`${service.name} logo`}
+                        className="object-cover w-full h-full"
+                      />
+                    </div>
+                    <h4 className="font-medium text-center">{service.name}</h4>
+                    <p className="text-xs text-muted-foreground text-center mt-1">
+                      {service.description}
+                    </p>
+                    <div className="mt-3 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-accent">
+                      <span className="text-xs mr-1">Visit</span>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="12"
+                        height="12"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      >
+                        <path d="M5 12h14" />
+                        <path d="m12 5 7 7-7 7" />
+                      </svg>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            ) : (
+              <p className="text-center text-muted-foreground">
+                No services found matching your search.
+              </p>
+            )}
+          </section>
+        )}
+
         <section className="mb-10">
           <h2 className="text-2xl font-semibold mb-6">Browse Categories</h2>
           <div className="space-y-8">
@@ -94,19 +144,6 @@ const Index = () => {
             ))}
           </div>
         </section>
-
-        {isSearchActive && (
-          <section className="animate-fade-in">
-            <h2 className="text-2xl font-semibold mb-6">Search Results</h2>
-            {searchResults.length > 0 ? (
-              <ServiceGrid services={searchResults} />
-            ) : (
-              <p className="text-center text-muted-foreground">
-                No services found matching your search.
-              </p>
-            )}
-          </section>
-        )}
 
         {!selectedCategory && !isSearchActive && (
           <section className="animate-fade-in">
